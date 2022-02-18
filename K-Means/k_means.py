@@ -3,7 +3,6 @@ import distance
 import numpy as np
 import random
 
-
 def choose_random_k(data, num_k):
     return [random.choice(data) for i in range(num_k) ]
 
@@ -31,12 +30,12 @@ def k_means(data, num_clusters = 2, distance = 'euclidean'):
     while prev != k:
         prev = k
         y = assignment(data, k)
-        print(y)
         for i in range(len(k)):
             temp_data = []
             for j in range(len(data)):
                 if y[j] == i:
                     temp_data.append(data[j])
             k[i] =  mean_of_centroid(temp_data)
-    return k
     print('Converged')
+    y = assignment(data, k)
+    return {'y': y, 'k': k}
