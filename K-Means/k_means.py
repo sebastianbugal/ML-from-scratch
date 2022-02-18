@@ -24,7 +24,7 @@ def assignment(data, k):
     return temp_y
 
 
-def k_means(data, num_clusters = 2, distance = 'euclidean'):
+def k_means(data, num_clusters = 2, initialization_method = 'rand', distance = 'euclidean'):
     k = choose_random_k(data, num_clusters)
     prev = None
     while prev != k:
