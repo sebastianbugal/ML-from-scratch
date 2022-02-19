@@ -10,7 +10,7 @@ if __name__ == "__main__":
     print(ret_val)
     df_test = DataFrame(dict(x=X[:,0], y=X[:,1], label=ret_val['y']))
     df = DataFrame(dict(x=X[:,0], y=X[:,1], label=y))
-    colors = {0:'red', 1:'blue', 2:'yellow'}
+    colors = {0:'red', 1:'blue', 2:'green'}
     fig, ax = pyplot.subplots()
     grouped = df.groupby('label')
 
